@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/projects/LiveShout/!svn/ver/1/iPhoneOSDeps/include/ogg
+END
+config_types.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/projects/LiveShout/!svn/ver/1/iPhoneOSDeps/include/ogg/config_types.h
+END
+ogg.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/projects/LiveShout/!svn/ver/1/iPhoneOSDeps/include/ogg/ogg.h
+END
+os_types.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/projects/LiveShout/!svn/ver/1/iPhoneOSDeps/include/ogg/os_types.h
+END

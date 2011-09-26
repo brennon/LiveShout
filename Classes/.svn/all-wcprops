@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/projects/LiveShout/!svn/ver/12/Classes
+END
+SettingsViewController.xib
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/projects/LiveShout/!svn/ver/14/Classes/SettingsViewController.xib
+END
+AudioRecorder.m
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/projects/LiveShout/!svn/ver/16/Classes/AudioRecorder.m
+END
+AudioQueueObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/projects/LiveShout/!svn/ver/1/Classes/AudioQueueObject.h
+END
+SettingsViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/projects/LiveShout/!svn/ver/14/Classes/SettingsViewController.h
+END
+AudioQueueObject.m
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/projects/LiveShout/!svn/ver/1/Classes/AudioQueueObject.m
+END
+SettingsViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/projects/LiveShout/!svn/ver/14/Classes/SettingsViewController.m
+END
+ELTextFieldTableViewCell.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/projects/LiveShout/!svn/ver/1/Classes/ELTextFieldTableViewCell.h
+END
+LiveShoutAppDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/projects/LiveShout/!svn/ver/1/Classes/LiveShoutAppDelegate.h
+END
+LiveShoutViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/projects/LiveShout/!svn/ver/11/Classes/LiveShoutViewController.h
+END
+ELTextFieldTableViewCell.m
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/projects/LiveShout/!svn/ver/1/Classes/ELTextFieldTableViewCell.m
+END
+liveshout.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/projects/LiveShout/!svn/ver/13/Classes/liveshout.h
+END
+LiveShoutAppDelegate.m
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/projects/LiveShout/!svn/ver/1/Classes/LiveShoutAppDelegate.m
+END
+LiveShoutViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/projects/LiveShout/!svn/ver/14/Classes/LiveShoutViewController.m
+END
+liveshout.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/projects/LiveShout/!svn/ver/13/Classes/liveshout.m
+END
+AudioRecorder.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/projects/LiveShout/!svn/ver/11/Classes/AudioRecorder.h
+END

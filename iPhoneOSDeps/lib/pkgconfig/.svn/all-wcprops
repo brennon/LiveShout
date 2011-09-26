@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/projects/LiveShout/!svn/ver/3/iPhoneOSDeps/lib/pkgconfig
+END
+shout.pc
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/projects/LiveShout/!svn/ver/3/iPhoneOSDeps/lib/pkgconfig/shout.pc
+END
+vorbis.pc
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/projects/LiveShout/!svn/ver/3/iPhoneOSDeps/lib/pkgconfig/vorbis.pc
+END
+vorbisfile.pc
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/projects/LiveShout/!svn/ver/3/iPhoneOSDeps/lib/pkgconfig/vorbisfile.pc
+END
+vorbisenc.pc
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/projects/LiveShout/!svn/ver/3/iPhoneOSDeps/lib/pkgconfig/vorbisenc.pc
+END
+ogg.pc
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/projects/LiveShout/!svn/ver/3/iPhoneOSDeps/lib/pkgconfig/ogg.pc
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/projects/LiveShout/!svn/ver/1/iPhoneOSDeps/include/vorbis
+END
+vorbisenc.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/projects/LiveShout/!svn/ver/1/iPhoneOSDeps/include/vorbis/vorbisenc.h
+END
+codec.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/projects/LiveShout/!svn/ver/1/iPhoneOSDeps/include/vorbis/codec.h
+END
+vorbisfile.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/projects/LiveShout/!svn/ver/1/iPhoneOSDeps/include/vorbis/vorbisfile.h
+END

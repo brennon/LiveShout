@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/projects/LiveShout/!svn/ver/12
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/projects/LiveShout/!svn/ver/1/main.m
+END
+LiveShoutViewController.xib
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/projects/LiveShout/!svn/ver/7/LiveShoutViewController.xib
+END
+LiveShout-Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/projects/LiveShout/!svn/ver/1/LiveShout-Info.plist
+END
+DistributionEntitlements.plist
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/projects/LiveShout/!svn/ver/1/DistributionEntitlements.plist
+END
+lib
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/projects/LiveShout/!svn/ver/10/lib
+END
+Default.png
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/projects/LiveShout/!svn/ver/1/Default.png
+END
+LiveShout_Prefix.pch
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/projects/LiveShout/!svn/ver/1/LiveShout_Prefix.pch
+END
+icon.png
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/projects/LiveShout/!svn/ver/1/icon.png
+END
+MainWindow.xib
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/projects/LiveShout/!svn/ver/1/MainWindow.xib
+END
+test.mp3
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/projects/LiveShout/!svn/ver/1/test.mp3
+END

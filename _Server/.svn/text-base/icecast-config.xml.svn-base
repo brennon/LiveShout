@@ -1,0 +1,95 @@
+<icecast>
+    <limits>
+        <clients>128</clients>
+        <sources>5</sources>
+        <threadpool>5</threadpool>
+        <queue-size>524288</queue-size>
+        <!-- <queue-size>2048</queue-size> -->
+        <client-timeout>30</client-timeout>
+        <header-timeout>15</header-timeout>
+        <source-timeout>120</source-timeout>
+        <burst-on-connect>0</burst-on-connect>
+        <burst-size>2048</burst-size>
+    </limits>
+
+    <authentication>
+        <source-password>eclipticlabs</source-password>
+        <relay-password>eclipticlabs</relay-password>
+        <admin-user>admin</admin-user>
+        <admin-password>eclipticlabs</admin-password>
+    </authentication>
+
+    <hostname>127.0.0.1</hostname>
+
+    <paths>
+        <basedir>./</basedir>
+        <logdir>./</logdir>
+        <webroot>./web</webroot>
+        <adminroot>./admin</adminroot>
+        <alias source="/" dest="/stream1"/>
+        <deny-ip>./conf/denyip.cfg</deny-ip>
+    </paths>
+
+    <listen-socket>
+        <port>8000</port>
+    </listen-socket>
+
+    <logging>
+        <accesslog>access.log</accesslog>
+        <errorlog>error.log</errorlog>
+        <playlistlog>playlist.log</playlistlog>
+        <loglevel>3</loglevel>
+        <logsize>10240</logsize> 
+        <logarchive>0</logarchive>
+    </logging>
+
+    <mount>
+        <mount-name>/stream1</mount-name>
+        <fallback-mount>/silence1s.ogg</fallback-mount>
+        <fallback-override>1</fallback-override>
+        <fallback-when-full>1</fallback-when-full>
+        <max-listeners>8</max-listeners>
+        <no-yp>1</no-yp>
+        <intro></intro>
+    </mount>
+    <shoutcast-mount>/stream1</shoutcast-mount>
+
+    <mount>
+        <mount-name>/stream2</mount-name>
+        <fallback-mount>/silence1s.ogg</fallback-mount>
+        <fallback-override>1</fallback-override>
+        <fallback-when-full>1</fallback-when-full>
+        <max-listeners>8</max-listeners>
+        <no-yp>1</no-yp>
+        <intro></intro>
+    </mount>
+    <shoutcast-mount>/stream2</shoutcast-mount>
+
+    <mount>
+        <mount-name>/stream3</mount-name>
+        <fallback-mount>/silence1s.ogg</fallback-mount>
+        <fallback-override>1</fallback-override>
+        <fallback-when-full>1</fallback-when-full>
+        <max-listeners>8</max-listeners>
+        <no-yp>1</no-yp>
+        <intro></intro>
+    </mount>
+    <shoutcast-mount>/stream3</shoutcast-mount>
+
+    <mount>
+        <mount-name>/stream4</mount-name>
+        <fallback-mount>/silence1s.ogg</fallback-mount>
+        <fallback-override>1</fallback-override>
+        <fallback-when-full>1</fallback-when-full>
+        <max-listeners>8</max-listeners>
+        <no-yp>1</no-yp>
+        <intro></intro>
+    </mount>
+    <shoutcast-mount>/stream4</shoutcast-mount>
+
+    <fileserve>1</fileserve>
+
+    <security>
+        <chroot>0</chroot>
+    </security>
+</icecast>

@@ -1,0 +1,231 @@
+//
+//  LiveShoutViewController.m
+//  LiveShout
+//
+//  Created by Niall Kelly on 24/05/2010.
+//  Copyright Ecliptic Labs 2010. All rights reserved.
+//
+
+#import "LiveShoutViewController.h"
+#import "SettingsViewController.h"
+#import <CoreAudio/CoreAudioTypes.h>
+
+@interface LiveShoutViewController (private)
+- (void)updateConnectionStatus:(BOOL)connected;
+@end
+
+#define		AUDIO_INPUT_LOCATION	@"/dev/null"
+
+@implementation LiveShoutViewController
+
+@synthesize host_IP_address, host_port, host_mount_point, meterTimer, recorder, soundFileURL, addressTextField, mountTextField;
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+	
+	initialMeterFrame = meterView.frame;
+	meterView.frame = CGRectZero;
+	
+	self.host_IP_address = @LS_ICECAST_IP;
+	self.host_port = [NSString stringWithFormat:@"%d", LS_ICECAST_PORT];
+	self.host_mount_point = @LS_ICECAST_MOUNTPOINT;
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self 
+											 selector:@selector(addressAndPortSettingsChanged:) 
+												 name:@"LS_AddressAndPortSettingsDidChangeNotification" 
+											   object:nil];
+	
+	self.meterTimer = [NSTimer scheduledTimerWithTimeInterval:	0.05	// seconds
+														  target:	self
+														selector:	@selector (updateMeterView)
+														userInfo:	nil	
+														 repeats:	YES];
+	
+	
+	audioLevels = calloc (2, sizeof (AudioQueueLevelMeterState));
+	peakLevels = calloc (2, sizeof (AudioQueueLevelMeterState));
+	
+	[self updateConnectionStatus:NO];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+	[super viewDidAppear:animated];
+}
+
+- (void)addressAndPortSettingsChanged:(NSNotification *)note {
+
+	NSDictionary *newSettingsDictionary = (NSDictionary *)[note object];
+	self.host_mount_point = [newSettingsDictionary objectForKey:@"mount"];
+	self.host_IP_address = [newSettingsDictionary objectForKey:@"address"];
+}
+
+- (IBAction)beginStream {
+	NSLog (@"This method doesn't do anything!");
+}
+
+- (void)updateMeterView {
+		
+	[self.recorder getAudioLevels:audioLevels peakLevels:peakLevels];
+
+	double peakPowerForChannel = (audioLevels[0] > 1.0 ? 1.0 : audioLevels[0]);
+	
+	CGRect newMeterFrame = CGRectMake(initialMeterFrame.origin.x, 
+									  initialMeterFrame.origin.y, 
+									  initialMeterFrame.size.width * peakPowerForChannel, 
+									  initialMeterFrame.size.height);
+	
+	meterView.frame = newMeterFrame;
+}
+
+- (void)showAlert:(NSString *)message {
+	
+//	NSLog(@"%@", message);
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil 
+													message:message 
+												   delegate:nil 
+										  cancelButtonTitle:@"OK" 
+										  otherButtonTitles:nil];
+	[alert show];
+	[alert release];
+}
+
+- (void)openStream {
+
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	BOOL isStereo = [[NSUserDefaults standardUserDefaults] boolForKey:@"LS_IS_FOR_STEREO_CONNECTION"];
+	
+	shout_t *shout;
+	int encoding_type = LS_ENCODING_VORBIS;
+	int n_channels = isStereo + 1; /* eventually dynamic ?? */
+	
+	/* FIX?? Does this leak memory? -jb */
+	AudioRecorder *theRecorder = [[AudioRecorder alloc] init];
+	self.recorder = theRecorder;
+	[theRecorder release];	// decrements the retain count for the theRecorder object
+	[self.recorder setNotificationDelegate: self];	// sets up the recorder object to receive property change notifications 
+	//	from the recording audio queue object
+	// activate the audio session immediately before recording starts
+	AudioSessionSetActive (true);
+	[self.recorder setupRecording];
+	
+	NSLog(@"Initialising source client");
+	const char *address = [self.host_IP_address UTF8String];
+	
+	float storedQuality = [[NSUserDefaults standardUserDefaults] floatForKey:@"LS_VORBIS_QUALITY_USER_KEY"];
+	float quality = (storedQuality == 0.0) ? 0.9 : storedQuality;
+	
+	NSLog(@"Using quality : %f", quality);
+	ls_init_encoder(LS_ENCODING_VORBIS, n_channels, quality);
+	
+	shout_init();
+	
+	if (!(shout = shout_new())) {
+		NSLog (@"Could not allocate shout_t");
+	}
+	
+	if(ls_init_shout(shout, encoding_type, LS_ICECAST_PORT, address, [self.host_mount_point UTF8String])){
+		NSLog (@"Could not set params");
+	}	
+	
+	if (shout_open(shout) == SHOUTERR_SUCCESS) {
+		NSLog (@"Connected to server...");
+		/* could be used for connection status LED */
+		self.recorder.connected = TRUE;
+		[self updateConnectionStatus:YES];
+	} else {		
+		NSString *msg = [NSString stringWithFormat:@"Error connecting: \n\n%s", shout_get_error(shout)];
+		[self showAlert:msg];		
+	}
+	
+	self.recorder.shout = shout;
+	self.recorder.n_channels = n_channels;
+	
+	NSLog (@"sending record message to recorder object.");
+	[self.recorder record];	// starts the recording audio queue object
+	[pool release];
+}
+
+
+- (IBAction)beginMicInput {
+	
+	NSLog (@"Starting mic input...");
+	
+	[NSThread detachNewThreadSelector:@selector(openStream) toTarget:self withObject:nil];
+}
+
+- (IBAction) stopMicInput {
+	[self.recorder stop];
+	
+}
+
+- (void)settingsViewControllerDidFinish:(SettingsViewController *)controller {
+    
+	[self dismissModalViewControllerAnimated:YES];
+}
+
+
+- (IBAction)flipToSettings {    
+	SettingsViewController *nextController = [[[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:[NSBundle mainBundle]] autorelease];
+	nextController.delegate = self;
+	
+	nextController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+	[self presentModalViewController:nextController animated:YES];
+}
+
+
+- (void)didReceiveMemoryWarning {
+	// Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+	
+	// Release any cached data, images, etc that aren't in use.
+}
+
+- (void)viewDidUnload {
+	// Release any retained subviews of the main view.
+	// e.g. self.myOutlet = nil;
+}
+
+
+- (void)dealloc {
+	
+	if (meterTimer && [meterTimer isValid]) [meterTimer invalidate];
+	
+	[host_port release];
+	[host_IP_address release];
+	
+    [super dealloc];
+}
+
+#pragma mark -
+#pragma mark Private 
+
+- (void)updateConnectionStatus:(BOOL)connected {
+
+	statusButton.title = connected ? @"On" : @"Off";
+	
+//	NSArray *currentToolbarItems = [bottomToolbar items];
+//	NSMutableArray *mutItems = [currentToolbarItems mutableCopy];
+//	
+//	NSString *labelText = connected ? @"Connected" : @"Not Connected";
+//	UIFont *font = [UIFont boldSystemFontOfSize:11.0f];
+//	CGSize size = [labelText sizeWithFont:font];
+//	UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
+//	label.text = labelText;
+//    label.textColor = [UIColor whiteColor];
+//    label.textAlignment = UITextAlignmentCenter;
+//    label.backgroundColor = [UIColor clearColor];
+//    label.font = font;
+//    
+//    UIBarButtonItem *connectionItem = [[UIBarButtonItem alloc] initWithCustomView:label];
+//    connectionItem.width = size.width + 5;
+//	[label release];
+//	
+//	
+//	[mutItems replaceObjectAtIndex:2 withObject:connectionItem];
+//	[bottomToolbar setItems:mutItems];
+//	[mutItems release];
+	
+}
+
+@end
