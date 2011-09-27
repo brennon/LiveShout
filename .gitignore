@@ -1,6 +1,7 @@
 .DS_Store
 *.swp
 *~.nib
+.svn
 
 build/
 
@@ -9,5 +10,6 @@ build/
 
 xcuserdata
 
-*.xcodeproj
-!*.xcodeproj/project.pbxproj
+*.pbxuser
+*.perspective
+*.perspectivev3

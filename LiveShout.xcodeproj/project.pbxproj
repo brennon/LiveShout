@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* LiveShoutAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* LiveShoutAppDelegate.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		2899E5220DE3E06400AC0155 /* LiveShoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* LiveShoutViewController.xib */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28D7ACF80DDB3853001CB0EB /* LiveShoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* LiveShoutViewController.m */; };
+		3AB7612B142FE50700186893 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB76128142FE50700186893 /* Icon.png */; };
+		3AB7612C142FE50700186893 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB76129142FE50700186893 /* Icon@2x.png */; };
+		3AB7612D142FE50700186893 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 3AB7612A142FE50700186893 /* iTunesArtwork */; };
+		7C3EC08E11AAA4E5009F32D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3EC05711AAA3CD009F32D2 /* main.m */; };
+		7C89395411BFF3970058BDFE /* liveshout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0544111AA7F64000D9820 /* liveshout.m */; };
+		7C893A4111BFF3D00058BDFE /* libogg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C89397311BFF3D00058BDFE /* libogg.a */; };
+		7C893A4311BFF3D00058BDFE /* libshout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C89397511BFF3D00058BDFE /* libshout.a */; };
+		7C893A4511BFF3D00058BDFE /* libvorbis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C89397711BFF3D00058BDFE /* libvorbis.a */; };
+		7C893A4711BFF3D00058BDFE /* libvorbisenc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C89397911BFF3D00058BDFE /* libvorbisenc.a */; };
+		7C893A4911BFF3D00058BDFE /* libvorbisfile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C89397B11BFF3D00058BDFE /* libvorbisfile.a */; };
+		7C893A4B11BFF3D00058BDFE /* ogg.pc in Resources */ = {isa = PBXBuildFile; fileRef = 7C89397E11BFF3D00058BDFE /* ogg.pc */; };
+		7C893A4C11BFF3D00058BDFE /* shout.pc in Resources */ = {isa = PBXBuildFile; fileRef = 7C89397F11BFF3D00058BDFE /* shout.pc */; };
+		7C893A4D11BFF3D00058BDFE /* vorbis.pc in Resources */ = {isa = PBXBuildFile; fileRef = 7C89398011BFF3D00058BDFE /* vorbis.pc */; };
+		7C893A4E11BFF3D00058BDFE /* vorbisenc.pc in Resources */ = {isa = PBXBuildFile; fileRef = 7C89398111BFF3D00058BDFE /* vorbisenc.pc */; };
+		7C893A4F11BFF3D00058BDFE /* vorbisfile.pc in Resources */ = {isa = PBXBuildFile; fileRef = 7C89398211BFF3D00058BDFE /* vorbisfile.pc */; };
+		7C893A5011BFF3D00058BDFE /* ogg.m4 in Resources */ = {isa = PBXBuildFile; fileRef = 7C89398511BFF3D00058BDFE /* ogg.m4 */; };
+		7C893A5111BFF3D00058BDFE /* shout.m4 in Resources */ = {isa = PBXBuildFile; fileRef = 7C89398611BFF3D00058BDFE /* shout.m4 */; };
+		7C893A5211BFF3D00058BDFE /* vorbis.m4 in Resources */ = {isa = PBXBuildFile; fileRef = 7C89398711BFF3D00058BDFE /* vorbis.m4 */; };
+		7C8C0B2911C2389200F8550F /* DistributionEntitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C8C0B2811C2389200F8550F /* DistributionEntitlements.plist */; };
+		7C8C0BB511C28FD000F8550F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8C0BB311C28FD000F8550F /* SettingsViewController.m */; };
+		7C8C0BB611C28FD000F8550F /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C8C0BB411C28FD000F8550F /* SettingsViewController.xib */; };
+		7C8C0BDF11C291CF00F8550F /* soundbar_mono.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C8C0BDC11C291CF00F8550F /* soundbar_mono.png */; };
+		7C8C0BE011C291CF00F8550F /* soundbar_plate_mono.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C8C0BDD11C291CF00F8550F /* soundbar_plate_mono.png */; };
+		7C8C0BE111C291CF00F8550F /* speaker_grill.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C8C0BDE11C291CF00F8550F /* speaker_grill.png */; };
+		7C8C0C0611C2941000F8550F /* ELTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8C0C0511C2941000F8550F /* ELTextFieldTableViewCell.m */; };
+		7C8C0D3711C2AF1F00F8550F /* AudioQueueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8C0D3411C2AF1F00F8550F /* AudioQueueObject.m */; };
+		7C8C0D3811C2AF1F00F8550F /* AudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8C0D3611C2AF1F00F8550F /* AudioRecorder.m */; };
+		7C8C0D4211C2AFDE00F8550F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8C0D4111C2AFDE00F8550F /* AudioToolbox.framework */; };
+		7C8F30D811C2B65600A6A21D /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7C8F30D711C2B65600A6A21D /* test.mp3 */; };
+		7C95EF6511C15A9D00E08A31 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C95EF6411C15A9D00E08A31 /* CoreAudio.framework */; };
+		7C96252911C153EC004EAC7D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C96252811C153EC004EAC7D /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* LiveShoutAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveShoutAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* LiveShoutAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveShoutAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* LiveShout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveShout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E5210DE3E06400AC0155 /* LiveShoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveShoutViewController.xib; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* LiveShoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveShoutViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* LiveShoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveShoutViewController.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* LiveShout_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveShout_Prefix.pch; sourceTree = "<group>"; };
+		3AB76128142FE50700186893 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		3AB76129142FE50700186893 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		3AB7612A142FE50700186893 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		7C3EC05711AAA3CD009F32D2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7C89396911BFF3D00058BDFE /* config_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config_types.h; sourceTree = "<group>"; };
+		7C89396A11BFF3D00058BDFE /* ogg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ogg.h; sourceTree = "<group>"; };
+		7C89396B11BFF3D00058BDFE /* os_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = os_types.h; sourceTree = "<group>"; };
+		7C89396D11BFF3D00058BDFE /* shout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shout.h; sourceTree = "<group>"; };
+		7C89396F11BFF3D00058BDFE /* codec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = codec.h; sourceTree = "<group>"; };
+		7C89397011BFF3D00058BDFE /* vorbisenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vorbisenc.h; sourceTree = "<group>"; };
+		7C89397111BFF3D00058BDFE /* vorbisfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vorbisfile.h; sourceTree = "<group>"; };
+		7C89397311BFF3D00058BDFE /* libogg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libogg.a; sourceTree = "<group>"; };
+		7C89397411BFF3D00058BDFE /* libogg.la */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = libogg.la; sourceTree = "<group>"; };
+		7C89397511BFF3D00058BDFE /* libshout.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libshout.a; sourceTree = "<group>"; };
+		7C89397611BFF3D00058BDFE /* libshout.la */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = libshout.la; sourceTree = "<group>"; };
+		7C89397711BFF3D00058BDFE /* libvorbis.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvorbis.a; sourceTree = "<group>"; };
+		7C89397811BFF3D00058BDFE /* libvorbis.la */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = libvorbis.la; sourceTree = "<group>"; };
+		7C89397911BFF3D00058BDFE /* libvorbisenc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvorbisenc.a; sourceTree = "<group>"; };
+		7C89397A11BFF3D00058BDFE /* libvorbisenc.la */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = libvorbisenc.la; sourceTree = "<group>"; };
+		7C89397B11BFF3D00058BDFE /* libvorbisfile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvorbisfile.a; sourceTree = "<group>"; };
+		7C89397C11BFF3D00058BDFE /* libvorbisfile.la */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = libvorbisfile.la; sourceTree = "<group>"; };
+		7C89397E11BFF3D00058BDFE /* ogg.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ogg.pc; sourceTree = "<group>"; };
+		7C89397F11BFF3D00058BDFE /* shout.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = shout.pc; sourceTree = "<group>"; };
+		7C89398011BFF3D00058BDFE /* vorbis.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vorbis.pc; sourceTree = "<group>"; };
+		7C89398111BFF3D00058BDFE /* vorbisenc.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vorbisenc.pc; sourceTree = "<group>"; };
+		7C89398211BFF3D00058BDFE /* vorbisfile.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vorbisfile.pc; sourceTree = "<group>"; };
+		7C89398511BFF3D00058BDFE /* ogg.m4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ogg.m4; sourceTree = "<group>"; };
+		7C89398611BFF3D00058BDFE /* shout.m4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = shout.m4; sourceTree = "<group>"; };
+		7C89398711BFF3D00058BDFE /* vorbis.m4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vorbis.m4; sourceTree = "<group>"; };
+		7C8C0B2811C2389200F8550F /* DistributionEntitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DistributionEntitlements.plist; sourceTree = "<group>"; };
+		7C8C0BB211C28FD000F8550F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		7C8C0BB311C28FD000F8550F /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		7C8C0BB411C28FD000F8550F /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = Classes/SettingsViewController.xib; sourceTree = "<group>"; };
+		7C8C0BDC11C291CF00F8550F /* soundbar_mono.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = soundbar_mono.png; path = Resources/soundbar_mono.png; sourceTree = "<group>"; };
+		7C8C0BDD11C291CF00F8550F /* soundbar_plate_mono.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = soundbar_plate_mono.png; path = Resources/soundbar_plate_mono.png; sourceTree = "<group>"; };
+		7C8C0BDE11C291CF00F8550F /* speaker_grill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speaker_grill.png; path = Resources/speaker_grill.png; sourceTree = "<group>"; };
+		7C8C0BFA11C293FF00F8550F /* ELTextFieldTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ELTextFieldTableViewCell.h; sourceTree = "<group>"; };
+		7C8C0C0511C2941000F8550F /* ELTextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELTextFieldTableViewCell.m; sourceTree = "<group>"; };
+		7C8C0D3311C2AF1F00F8550F /* AudioQueueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioQueueObject.h; sourceTree = "<group>"; };
+		7C8C0D3411C2AF1F00F8550F /* AudioQueueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioQueueObject.m; sourceTree = "<group>"; };
+		7C8C0D3511C2AF1F00F8550F /* AudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioRecorder.h; sourceTree = "<group>"; };
+		7C8C0D3611C2AF1F00F8550F /* AudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioRecorder.m; sourceTree = "<group>"; };
+		7C8C0D4111C2AFDE00F8550F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		7C8F30D711C2B65600A6A21D /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test.mp3; sourceTree = "<group>"; };
+		7C95EF6411C15A9D00E08A31 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		7C96252811C153EC004EAC7D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7CC0543B11AA7F42000D9820 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7CC0544111AA7F64000D9820 /* liveshout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = liveshout.m; sourceTree = "<group>"; };
+		7D1132C411E13465000540DC /* liveshout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = liveshout.h; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* LiveShout-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "LiveShout-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				7C893A4111BFF3D00058BDFE /* libogg.a in Frameworks */,
+				7C893A4311BFF3D00058BDFE /* libshout.a in Frameworks */,
+				7C893A4511BFF3D00058BDFE /* libvorbis.a in Frameworks */,
+				7C893A4711BFF3D00058BDFE /* libvorbisenc.a in Frameworks */,
+				7C893A4911BFF3D00058BDFE /* libvorbisfile.a in Frameworks */,
+				7C96252911C153EC004EAC7D /* AVFoundation.framework in Frameworks */,
+				7C95EF6511C15A9D00E08A31 /* CoreAudio.framework in Frameworks */,
+				7C8C0D4211C2AFDE00F8550F /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7D1132C411E13465000540DC /* liveshout.h */,
+				1D3623240D0F684500981E51 /* LiveShoutAppDelegate.h */,
+				1D3623250D0F684500981E51 /* LiveShoutAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* LiveShoutViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* LiveShoutViewController.m */,
+				7CC0544111AA7F64000D9820 /* liveshout.m */,
+				7C8C0BB211C28FD000F8550F /* SettingsViewController.h */,
+				7C8C0BB311C28FD000F8550F /* SettingsViewController.m */,
+				7C8C0BFA11C293FF00F8550F /* ELTextFieldTableViewCell.h */,
+				7C8C0C0511C2941000F8550F /* ELTextFieldTableViewCell.m */,
+				7C8C0D3311C2AF1F00F8550F /* AudioQueueObject.h */,
+				7C8C0D3411C2AF1F00F8550F /* AudioQueueObject.m */,
+				7C8C0D3511C2AF1F00F8550F /* AudioRecorder.h */,
+				7C8C0D3611C2AF1F00F8550F /* AudioRecorder.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* LiveShout.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				7C89396611BFF3D00058BDFE /* iPhoneOSDeps */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* LiveShout_Prefix.pch */,
+				7C3EC05711AAA3CD009F32D2 /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3AB76128142FE50700186893 /* Icon.png */,
+				3AB76129142FE50700186893 /* Icon@2x.png */,
+				3AB7612A142FE50700186893 /* iTunesArtwork */,
+				7C8F30D711C2B65600A6A21D /* test.mp3 */,
+				7C8C0BDC11C291CF00F8550F /* soundbar_mono.png */,
+				7C8C0BDD11C291CF00F8550F /* soundbar_plate_mono.png */,
+				7C8C0BDE11C291CF00F8550F /* speaker_grill.png */,
+				7CC0543B11AA7F42000D9820 /* Default.png */,
+				2899E5210DE3E06400AC0155 /* LiveShoutViewController.xib */,
+				7C8C0BB411C28FD000F8550F /* SettingsViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* LiveShout-Info.plist */,
+				7C8C0B2811C2389200F8550F /* DistributionEntitlements.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+				7C96252811C153EC004EAC7D /* AVFoundation.framework */,
+				7C95EF6411C15A9D00E08A31 /* CoreAudio.framework */,
+				7C8C0D4111C2AFDE00F8550F /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C89396611BFF3D00058BDFE /* iPhoneOSDeps */ = {
+			isa = PBXGroup;
+			children = (
+				7C89396711BFF3D00058BDFE /* include */,
+				7C89397211BFF3D00058BDFE /* lib */,
+				7C89398311BFF3D00058BDFE /* share */,
+			);
+			path = iPhoneOSDeps;
+			sourceTree = "<group>";
+		};
+		7C89396711BFF3D00058BDFE /* include */ = {
+			isa = PBXGroup;
+			children = (
+				7C89396811BFF3D00058BDFE /* ogg */,
+				7C89396C11BFF3D00058BDFE /* shout */,
+				7C89396E11BFF3D00058BDFE /* vorbis */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		7C89396811BFF3D00058BDFE /* ogg */ = {
+			isa = PBXGroup;
+			children = (
+				7C89396911BFF3D00058BDFE /* config_types.h */,
+				7C89396A11BFF3D00058BDFE /* ogg.h */,
+				7C89396B11BFF3D00058BDFE /* os_types.h */,
+			);
+			path = ogg;
+			sourceTree = "<group>";
+		};
+		7C89396C11BFF3D00058BDFE /* shout */ = {
+			isa = PBXGroup;
+			children = (
+				7C89396D11BFF3D00058BDFE /* shout.h */,
+			);
+			path = shout;
+			sourceTree = "<group>";
+		};
+		7C89396E11BFF3D00058BDFE /* vorbis */ = {
+			isa = PBXGroup;
+			children = (
+				7C89396F11BFF3D00058BDFE /* codec.h */,
+				7C89397011BFF3D00058BDFE /* vorbisenc.h */,
+				7C89397111BFF3D00058BDFE /* vorbisfile.h */,
+			);
+			path = vorbis;
+			sourceTree = "<group>";
+		};
+		7C89397211BFF3D00058BDFE /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				7C89397311BFF3D00058BDFE /* libogg.a */,
+				7C89397411BFF3D00058BDFE /* libogg.la */,
+				7C89397511BFF3D00058BDFE /* libshout.a */,
+				7C89397611BFF3D00058BDFE /* libshout.la */,
+				7C89397711BFF3D00058BDFE /* libvorbis.a */,
+				7C89397811BFF3D00058BDFE /* libvorbis.la */,
+				7C89397911BFF3D00058BDFE /* libvorbisenc.a */,
+				7C89397A11BFF3D00058BDFE /* libvorbisenc.la */,
+				7C89397B11BFF3D00058BDFE /* libvorbisfile.a */,
+				7C89397C11BFF3D00058BDFE /* libvorbisfile.la */,
+				7C89397D11BFF3D00058BDFE /* pkgconfig */,
+			);
+			name = lib;
+			path = ../lib;
+			sourceTree = "<group>";
+		};
+		7C89397D11BFF3D00058BDFE /* pkgconfig */ = {
+			isa = PBXGroup;
+			children = (
+				7C89397E11BFF3D00058BDFE /* ogg.pc */,
+				7C89397F11BFF3D00058BDFE /* shout.pc */,
+				7C89398011BFF3D00058BDFE /* vorbis.pc */,
+				7C89398111BFF3D00058BDFE /* vorbisenc.pc */,
+				7C89398211BFF3D00058BDFE /* vorbisfile.pc */,
+			);
+			path = pkgconfig;
+			sourceTree = "<group>";
+		};
+		7C89398311BFF3D00058BDFE /* share */ = {
+			isa = PBXGroup;
+			children = (
+				7C89398411BFF3D00058BDFE /* aclocal */,
+			);
+			path = share;
+			sourceTree = "<group>";
+		};
+		7C89398411BFF3D00058BDFE /* aclocal */ = {
+			isa = PBXGroup;
+			children = (
+				7C89398511BFF3D00058BDFE /* ogg.m4 */,
+				7C89398611BFF3D00058BDFE /* shout.m4 */,
+				7C89398711BFF3D00058BDFE /* vorbis.m4 */,
+			);
+			path = aclocal;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* LiveShout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "LiveShout" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiveShout;
+			productName = LiveShout;
+			productReference = 1D6058910D05DD3D006BFB54 /* LiveShout.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LiveShout" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* LiveShout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* LiveShoutViewController.xib in Resources */,
+				7C893A4B11BFF3D00058BDFE /* ogg.pc in Resources */,
+				7C893A4C11BFF3D00058BDFE /* shout.pc in Resources */,
+				7C893A4D11BFF3D00058BDFE /* vorbis.pc in Resources */,
+				7C893A4E11BFF3D00058BDFE /* vorbisenc.pc in Resources */,
+				7C893A4F11BFF3D00058BDFE /* vorbisfile.pc in Resources */,
+				7C893A5011BFF3D00058BDFE /* ogg.m4 in Resources */,
+				7C893A5111BFF3D00058BDFE /* shout.m4 in Resources */,
+				7C893A5211BFF3D00058BDFE /* vorbis.m4 in Resources */,
+				7C8C0B2911C2389200F8550F /* DistributionEntitlements.plist in Resources */,
+				7C8C0BB611C28FD000F8550F /* SettingsViewController.xib in Resources */,
+				7C8C0BDF11C291CF00F8550F /* soundbar_mono.png in Resources */,
+				7C8C0BE011C291CF00F8550F /* soundbar_plate_mono.png in Resources */,
+				7C8C0BE111C291CF00F8550F /* speaker_grill.png in Resources */,
+				7C8F30D811C2B65600A6A21D /* test.mp3 in Resources */,
+				3AB7612B142FE50700186893 /* Icon.png in Resources */,
+				3AB7612C142FE50700186893 /* Icon@2x.png in Resources */,
+				3AB7612D142FE50700186893 /* iTunesArtwork in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D3623260D0F684500981E51 /* LiveShoutAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* LiveShoutViewController.m in Sources */,
+				7C3EC08E11AAA4E5009F32D2 /* main.m in Sources */,
+				7C89395411BFF3970058BDFE /* liveshout.m in Sources */,
+				7C8C0BB511C28FD000F8550F /* SettingsViewController.m in Sources */,
+				7C8C0C0611C2941000F8550F /* ELTextFieldTableViewCell.m in Sources */,
+				7C8C0D3711C2AF1F00F8550F /* AudioQueueObject.m in Sources */,
+				7C8C0D3811C2AF1F00F8550F /* AudioRecorder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Brennon Bortz";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brennon Bortz";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = LiveShout_Prefix.pch;
+				INFOPLIST_FILE = "LiveShout-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/lib\"",
+					"\"$(SRCROOT)/iPhoneOSDeps/lib\"",
+					"\"$(SRCROOT)/iPhoneSimulatorDeps/lib\"",
+				);
+				PRODUCT_NAME = LiveShout;
+				PROVISIONING_PROFILE = "41608DD0-3161-4811-8178-69518F587F29";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "41608DD0-3161-4811-8178-69518F587F29";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Brennon Bortz";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brennon Bortz";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = LiveShout_Prefix.pch;
+				INFOPLIST_FILE = "LiveShout-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/lib\"",
+					"\"$(SRCROOT)/iPhoneOSDeps/lib\"",
+					"\"$(SRCROOT)/iPhoneSimulatorDeps/lib\"",
+				);
+				PRODUCT_NAME = LiveShout;
+				PROVISIONING_PROFILE = "41608DD0-3161-4811-8178-69518F587F29";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "41608DD0-3161-4811-8178-69518F587F29";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3AB76126142FE1AD00186893 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Brennon Bortz";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brennon Bortz";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = iPhoneSimulatorDeps/include;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				PROVISIONING_PROFILE = "29052518-AE16-4EEC-84FC-A8F9BA9E4D9D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "29052518-AE16-4EEC-84FC-A8F9BA9E4D9D";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = "Ad Hoc";
+		};
+		3AB76127142FE1AD00186893 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Brennon Bortz";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brennon Bortz";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = LiveShout_Prefix.pch;
+				INFOPLIST_FILE = "LiveShout-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/lib\"",
+					"\"$(SRCROOT)/iPhoneOSDeps/lib\"",
+					"\"$(SRCROOT)/iPhoneSimulatorDeps/lib\"",
+				);
+				PRODUCT_NAME = LiveShout;
+				PROVISIONING_PROFILE = "41608DD0-3161-4811-8178-69518F587F29";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "41608DD0-3161-4811-8178-69518F587F29";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Ad Hoc";
+		};
+		7C8C0B2C11C2389D00F8550F /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Brennon Bortz";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brennon Bortz";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = iPhoneSimulatorDeps/include;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				PROVISIONING_PROFILE = "29052518-AE16-4EEC-84FC-A8F9BA9E4D9D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "29052518-AE16-4EEC-84FC-A8F9BA9E4D9D";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Distribution;
+		};
+		7C8C0B2D11C2389D00F8550F /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = DistributionEntitlements.plist;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Brennon Bortz";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brennon Bortz";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = LiveShout_Prefix.pch;
+				INFOPLIST_FILE = "LiveShout-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/lib\"",
+					"\"$(SRCROOT)/iPhoneOSDeps/lib\"",
+					"\"$(SRCROOT)/iPhoneSimulatorDeps/lib\"",
+				);
+				PRODUCT_NAME = LiveShout;
+				PROVISIONING_PROFILE = "41608DD0-3161-4811-8178-69518F587F29";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "41608DD0-3161-4811-8178-69518F587F29";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Brennon Bortz";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brennon Bortz";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = iPhoneSimulatorDeps/include;
+				LIBRARY_SEARCH_PATHS = "";
+				PREBINDING = NO;
+				PROVISIONING_PROFILE = "29052518-AE16-4EEC-84FC-A8F9BA9E4D9D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "29052518-AE16-4EEC-84FC-A8F9BA9E4D9D";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Brennon Bortz";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brennon Bortz";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = iPhoneSimulatorDeps/include;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				PROVISIONING_PROFILE = "29052518-AE16-4EEC-84FC-A8F9BA9E4D9D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "29052518-AE16-4EEC-84FC-A8F9BA9E4D9D";
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "LiveShout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				3AB76127142FE1AD00186893 /* Ad Hoc */,
+				7C8C0B2D11C2389D00F8550F /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LiveShout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				3AB76126142FE1AD00186893 /* Ad Hoc */,
+				7C8C0B2C11C2389D00F8550F /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
